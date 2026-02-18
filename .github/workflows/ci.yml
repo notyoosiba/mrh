@@ -3,10 +3,10 @@ name: ci
 on:
   push:
     branches-ignore:
-      - '!master'
+      - 'master'
   pull_request:
-    branches: 
-      - '!master'
+    branches:
+      - 'master'
 
 permissions:
   contents: read
@@ -21,6 +21,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v6
-      
+
     - name: shellcheck
       run: ./build/ci.sh
